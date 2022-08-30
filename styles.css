@@ -1,0 +1,10 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.results{
+    display: flex;
+    gap: 5vw;
+}

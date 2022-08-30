@@ -112,7 +112,11 @@ function tallyPlayer() {
   var number = parseInt(playerDivContent.textContent, 10) + 1;
   playerDivContent.textContent = number + " Player Wins";
   //Check for end
-  if (number >= 5) {
+  if (
+    number >= 5 &&
+    number >
+      parseInt(document.querySelector(".computer-container").textContent, 10)
+  ) {
     document.querySelector(".winner").textContent = "Player Wins!;";
   }
 }
@@ -121,7 +125,11 @@ function tallyComputer() {
   const computerDivContent = document.querySelector(".computer-container");
   var number = parseInt(computerDivContent.textContent, 10) + 1;
   computerDivContent.textContent = number + " Computer Wins";
-  if (number >= 5) {
+  if (
+    number >= 5 &&
+    number >
+      parseInt(document.querySelector(".player-container").textContent, 10)
+  ) {
     document.querySelector(".winner").textContent = "Computer Wins!";
   }
 }
@@ -132,7 +140,18 @@ function tallyTie() {
   tieDivContent.textContent = number + " Ties";
 }
 
+//JS logic for Rock Paper Scissors buttons
 const buttons = document.querySelectorAll("button");
 buttons.forEach((element) => {
   element.addEventListener("click", buttonGame);
+});
+
+//JS logic for reset button
+const resetButton = document.querySelector("#reset");
+resetButton.addEventListener("click", (event) => {
+  //Clearing out previous results
+  document.querySelector(".player-container").textContent = "0 Player Wins";
+  document.querySelector(".computer-container").textContent = "0 Computer Wins";
+  document.querySelector(".tie-container").textContent = "0 Ties";
+  document.querySelector(".winner").textContent = "Undecided";
 });

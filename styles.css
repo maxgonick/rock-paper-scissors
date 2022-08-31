@@ -59,6 +59,11 @@ body {
   background-color: transparent;
 }
 
+#rock:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
 #paper {
   display: inline-block;
   padding: 0.35em 1.2em;
@@ -74,6 +79,11 @@ body {
   background-color: transparent;
 }
 
+#paper:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
 #scissors {
   display: inline-block;
   padding: 0.35em 1.2em;
@@ -87,6 +97,11 @@ body {
   color: #ffffff;
   text-align: center;
   background-color: transparent;
+}
+
+#scissors:hover {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .results {
@@ -118,6 +133,11 @@ body {
   color: #ffffff;
   text-align: center;
   background-color: transparent;
+}
+
+#reset:hover {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .player-container {

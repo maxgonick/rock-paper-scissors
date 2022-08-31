@@ -117,7 +117,8 @@ function tallyPlayer() {
     number >
       parseInt(document.querySelector(".computer-container").textContent, 10)
   ) {
-    document.querySelector(".winner").textContent = "Player Wins!;";
+    document.querySelector(".winner").textContent = "Player Wins!";
+    document.querySelector(".winner").style.borderColor = "green";
   }
 }
 
@@ -131,6 +132,7 @@ function tallyComputer() {
       parseInt(document.querySelector(".player-container").textContent, 10)
   ) {
     document.querySelector(".winner").textContent = "Computer Wins!";
+    document.querySelector(".winner").style.borderColor = "green";
   }
 }
 
@@ -154,4 +156,5 @@ resetButton.addEventListener("click", (event) => {
   document.querySelector(".computer-container").textContent = "0 Computer Wins";
   document.querySelector(".tie-container").textContent = "0 Ties";
   document.querySelector(".winner").textContent = "Undecided";
+  document.querySelector(".winner").style.borderColor = "red";
 });
